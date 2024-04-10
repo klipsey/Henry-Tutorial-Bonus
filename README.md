@@ -92,6 +92,7 @@ Sick! We can look at the children of MercSwordFinisherSlash now. It's even cool 
 ![step 2.5](/images/2.5.png)
 
 ![step 2.6](/images/2.6.png)
+
 Now all the component values can be edited to experiment with any changes. Since this is a fully editable prefab now, you can also clone other prefabs and Frankenstein them together to experiment with any desired outcome:
 
 ![step 2.7](/images/2.7.png)
