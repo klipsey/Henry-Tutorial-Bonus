@@ -137,7 +137,12 @@ https://www.youtube.com/watch?v=IhIGVO4fqLg
 https://www.youtube.com/watch?v=9dZjcFW3BRY&t=513s
 
 ## Henry Tutorial Rigging Guide:
+
 https://github.com/ArcPh1r3/HenryTutorial/wiki/Survivor-Model-Tips#rigging
 
 For animating make sure any walking or sprinting animations have the same leg touch the floor first. I was told this is important so I assume you should follow it too. 
-If you've made it this far, I don't think you need anymore guides. Use google and that noggin of yours to figure anything else out.
+If you've made it this far, I don't think you need anymore guides. Use Google and that noggin of yours to figure anything else out.
+
+Tip: ctrl f in the modding discord and type 1 - 2 keywords to find old problems that were answered.
+
+Tip: Use Unity scripting docs to better manipulate components or gizmos in code.
