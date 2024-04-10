@@ -73,4 +73,46 @@ Once thunderkit is set up, I highly recommend installing SimplyAddress into your
 
 https://github.com/PassivePicasso/SimplyAddress
 
-So you have the addressable browser. Now you can directly access the prefabs you were referencing early with the addressables website.
+So you have the addressable browser. Now you can directly access the prefabs you were referencing earlier with the addressable website:
+
+![step 2.1](/images/2.1.png)
+
+Let's go back to the slashEffect example from before. Find where the prefab is and inspect it:
+
+Sick! We can look at the children of MercSwordFinisherSlash now. It's even cool to see Hopoo games made SwingDistortion? since they had no clue wtf they were doing! Anyways, let's clone this thing so we can change the values. All you need to do is create an empty game object on the left and add an addressable prefab component. Then, paste the address of your prefab and check replace self. If it doesn't load immediately just hit random buttons or delete any previous game objects parented to it:
+
+Now all the component values can be edited to experiment with any changes. Since this is a fully editable prefab now, you can also clone other prefabs and Frankenstein them together to experiment with any desired outcome:
+
+Now, how do we get our edited prefab in the game? We need to make sure to follow the steps we took to edit our prefab in code. In this example, all I want to do is change the size of the SwingTrail. Back in C#, all we do is load the slash effect as normal and then change the values after we clone it:
+
+Bonus tips for changing certain colors or materials. 
+To change a material, make sure to reference the Renderer and not the direct component:
+
+When changing the color of a material, avoid changing it directly as this changes the material for every asset using it. Instead, edit the main material of the renderer directly 
+In this example, I instantiate a material and change the mainColor ("_Color") and the emissionColor ("_EmColor")  (tintColor is "_TintColor"):
+
+For some renderers, they require an array so you will need to create a new one to set them:
+
+To edit materials in a System directly is a bit more annoying. First, create a var. Then set it to the Systems.main. You can now edit values in it directly:
+
+# Modeling
+
+Let's say you want to make your model. There aren't any specific guides for it but here are some resources and tips:
+
+I recommend following this video to get a basic idea of controls and ways to block out your model:
+
+Try your best to make as few vertices as possible. Basically, it's ok if your character has the roughness of a ps2 character, you can smooth it out by using shade smooth and hopoos shaders will carry. I didn't know this and my first model now has god-awful topology.
+
+## Here's a good place to start: 
+
+https://www.youtube.com/watch?v=IhIGVO4fqLg
+
+## Now, look up a basic guide on what rigging is and how to do it. Here's a random ass video I found:
+
+https://www.youtube.com/watch?v=9dZjcFW3BRY&t=513s
+
+## Henry Tutorial Rigging Guide:
+https://github.com/ArcPh1r3/HenryTutorial/wiki/Survivor-Model-Tips#rigging
+
+For animating make sure any walking or sprinting animations have the same leg touch the floor first. I was told this is important so I assume you should follow it too. 
+If you've made it this far, I don't think you need anymore guides. Use google and that noggin of yours to figure anything else out.
