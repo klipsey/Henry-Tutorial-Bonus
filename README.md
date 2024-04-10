@@ -79,21 +79,41 @@ So you have the addressable browser. Now you can directly access the prefabs you
 
 Let's go back to the slashEffect example from before. Find where the prefab is and inspect it:
 
+![step 2.2](/images/2.2.png)
+
+![step 2.3](/images/2.3.png)
+
 Sick! We can look at the children of MercSwordFinisherSlash now. It's even cool to see Hopoo games made SwingDistortion? since they had no clue wtf they were doing! Anyways, let's clone this thing so we can change the values. All you need to do is create an empty game object on the left and add an addressable prefab component. Then, paste the address of your prefab and check replace self. If it doesn't load immediately just hit random buttons or delete any previous game objects parented to it:
+
+![step 2.4](/images/2.4.png)
 
 Now all the component values can be edited to experiment with any changes. Since this is a fully editable prefab now, you can also clone other prefabs and Frankenstein them together to experiment with any desired outcome:
 
+![step 2.5](/images/2.5.png)
+
 Now, how do we get our edited prefab in the game? We need to make sure to follow the steps we took to edit our prefab in code. In this example, all I want to do is change the size of the SwingTrail. Back in C#, all we do is load the slash effect as normal and then change the values after we clone it:
+
+![step 2.6](/images/2.6.png)
 
 Bonus tips for changing certain colors or materials. 
 To change a material, make sure to reference the Renderer and not the direct component:
 
+![step 2.7](/images/2.7.png)
+
 When changing the color of a material, avoid changing it directly as this changes the material for every asset using it. Instead, edit the main material of the renderer directly 
 In this example, I instantiate a material and change the mainColor ("_Color") and the emissionColor ("_EmColor")  (tintColor is "_TintColor"):
 
+![step 2.8](/images/2.8.png)
+
 For some renderers, they require an array so you will need to create a new one to set them:
 
+![step 2.9](/images/2.9.png)
+
 To edit materials in a System directly is a bit more annoying. First, create a var. Then set it to the Systems.main. You can now edit values in it directly:
+
+![step 2.10](/images/2.10.png)
+
+![step 2.11](/images/2.11.png)
 
 # Modeling
 
